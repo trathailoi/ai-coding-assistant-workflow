@@ -1,0 +1,74 @@
+You are an expert in Ruby on Rails, PostgreSQL and React/Redux.
+
+Code Style and Structure
+- Write concise, idiomatic Ruby code with accurate examples.
+- Follow Rails conventions and best practices.
+- Use object-oriented and functional programming patterns as appropriate.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable and method names (e.g., user_signed_in?, calculate_total).
+- Structure files according to Rails conventions (MVC, concerns, helpers, etc.).
+- Settings should be located at `config/app.yml`
+
+Naming Conventions
+- Use snake_case for file names, method names, and variables.
+- Use CamelCase for class and module names.
+- Follow Rails naming conventions for models, controllers, and views.
+- always use current actual time format value instead of `xxxxxxxxxxxxxx` value for `db/migrate` file's name prefix. for example: `20241001121402_create_users.rb`
+- Code has been written using proper and self-explanatory English
+
+Ruby and Rails Usage
+- Use Ruby 3.x features when appropriate (e.g., pattern matching, endless methods).
+- Leverage Rails' built-in helpers and methods.
+- Use ActiveRecord effectively for database operations.
+- adminjk is the prefix for all the admin routes (instead of admin)
+
+Syntax and Formatting
+- Follow the Ruby Style Guide (https://rubystyle.guide/)
+- Use Ruby's expressive syntax (e.g., unless, ||=, &.)
+- Prefer single quotes for strings unless interpolation is needed.
+- Comply with the `Rubocop` style guide that defined in the `.rubocop.yml` file. E.g.
+  - line length is limit to 120
+- Always use string based values for `enum`
+- Indentation of a line is no more than 2 spaces compare to its previous line
+
+Error Handling and Validation
+- Use exceptions for exceptional cases, not for control flow.
+- Implement proper error logging and user-friendly messages.
+- Use ActiveModel validations in models.
+- Handle errors gracefully in controllers and display appropriate flash messages.
+- for `models` file please specify the association with necessary options like `dependent: :destroy`, `optional: true`, etc. ; get rid of option that is not necessary and is implied by default, like `class_name: 'User'`, `primary_key: 'id'`, etc.
+- Use add, subtract, divide, multiply method from number_ext lib for calculation
+
+UI and Styling
+- Use Hotwire (Turbo and Stimulus) for dynamic, SPA-like interactions.
+- Implement responsive design with Tailwind CSS.
+- Use Rails view helpers and partials to keep views DRY.
+
+Performance Optimization
+- Use database indexing effectively.
+- Implement caching strategies (fragment caching, Russian Doll caching).
+- Use eager loading to avoid N+1 queries.
+- Optimize database queries using includes, joins, or select.
+
+Key Conventions
+- Follow RESTful routing conventions.
+- Use concerns for shared behavior across models or controllers.
+- Implement service objects for complex business logic.
+- Use background jobs (e.g., Sidekiq) for time-consuming tasks.
+
+Testing
+- Write comprehensive tests using RSpec or Cucumber.
+- Follow TDD/BDD practices.
+- Use factories (FactoryBot) for test data generation.
+- Using `shoulda-matchers` for testing validations, associations, etc. using `is_expected.to` syntax instead of `should` syntax
+- Newly created `.rb` file should always have `# frozen_string_literal: true` at the top
+- Regarding to javascript/typescript, newly added logic should have corresponding unit test to cover the logic.
+- All possible scenarios has been covered by either integration or unit test
+
+Security
+- Implement proper authentication and authorization (e.g., Devise, Pundit).
+- Use strong parameters in controllers.
+- Protect against common web vulnerabilities (XSS, CSRF, SQL injection).
+
+Follow the official Ruby on Rails guides for best practices in routing, controllers, models, views, and other Rails components.
+

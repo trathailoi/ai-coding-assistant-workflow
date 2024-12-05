@@ -1,0 +1,35 @@
+#######
+# Main:
+
+## Use claude-3-5-sonnet-20240620 model for the main chat
+sonnet: true
+
+#################
+# Cache Settings:
+
+## Enable caching of prompts (default: False)
+cache-prompts: true
+
+##################
+# Output Settings:
+
+## Use colors suitable for a dark terminal background (default: False)
+dark-mode: true
+
+## Use colors suitable for a light terminal background (default: False)
+#light-mode: false
+
+## Enable/disable pretty, colorized output (default: True)
+#pretty: true
+
+## Enable/disable streaming responses (default: True)
+stream: false
+
+## specify a read-only file (can be used multiple times)
+#read: xxx
+## Specify multiple values like this:
+read:
+  - .cursorrules
+
+## Use VI editing mode in the terminal (default: False)
+vim: true
